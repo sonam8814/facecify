@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Argent:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
+
+/* Update the body font */
+body {
+  font-family: 'Red Hat Display', sans-serif; /* Change font to Red Hat Display */
+  background: radial-gradient(
+		circle,
+		rgb(85, 204, 255) 0%,
+		rgb(255, 255, 255) 100%
+	);
+  color: #333333;
+  margin-top: 5rem; /* Space for fixed navbar */ 
+  margin-bottom: 3rem; /* Space for fixed navbar */ 
+}
+
+* { color:#660088; text-decoration: none;}
+
+/* Common styling for both tech-single-container and tech-single-container-reverse */
+.tech-single-container,
+.tech-single-container-reverse {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Optional: Light background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    gap: 20px; /* Space between image and description */
+    margin-bottom: 20px; /* Space between stacked containers */
+}
+
+.tech-single-container:hover,
+.tech-single-container-reverse:hover {
+    transform: translateY(-5px); /* Slight pop-up effect on hover */
+}
+
+.tech-image {
+    flex: 0 0 30%; /* Image takes 30% of the container width */
+    max-width: 300px; /* Maximum width to keep image reasonable */
+    min-width: 150px; /* Minimum width to prevent image from becoming too small */
+    padding: 10px; /* Additional padding */
+}
+
+.tech-img {
+    width: 100%; /* Image will resize according to the .tech-image container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.tech-description {
+    flex: 1; /* Description takes remaining space */
+    padding: 10px;
+}
+
+.tech-description h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tech-description p {
+    margin: 0;
+    color: #333; /* Optional: Text color */
+}
+
+.shadow-container {
+    margin-left: 120px; /* Center container and add margin around it */
+    margin-right: 120px; /* Center container and add margin around it */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for better contrast */
+}
+
+.shadow-container2 {
+    margin-left: 120px; /* Center container and add margin around it */
+    margin-right: 120px; /* Center container and add margin around it */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for better contrast */
+}
+.shadow-container3 {
+    margin-left: 120px; /* Center container and add margin around it */
+    margin-right: 120px; /* Center container and add margin around it */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for better contrast */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Adjust this value as needed */
+    object-fit: cover;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px;
+        width: 50%;
+    }
+
+    .shadow-container {
+        margin-left: 10px; /* Center container and add margin around it */
+        margin-right: 10px; /* Center container and add margin around it */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        border-radius: 8px; /* Rounded corners */
+        background-color: #fff; /* White background for better contrast */
+    }
+
+    .shadow-container2 {
+        margin-left: 10px; /* Center container and add margin around it */
+        margin-right: 10px; /* Center container and add margin around it */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        border-radius: 8px; /* Rounded corners */
+        background-color: #fff; /* White background for better contrast */
+    }
+    .shadow-container3 {
+        margin-left: 0px; /* Center container and add margin around it */
+        margin-right: 0px; /* Center container and add margin around it */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        border-radius: 8px; /* Rounded corners */
+        background-color: #fff; /* White background for better contrast */
+    }
+
+    .tech-single-container,
+    .tech-single-container-reverse {
+        flex-direction: column; /* Stack image and description vertically on smaller screens */
+        text-align: center; /* Center align text for better aesthetics */
+    }
+
+    .tech-image {
+        max-width: 50%;
+        margin-bottom: 1px; /* Add spacing between stacked elements */
+    }
+
+    .tech-img {
+        width: 100%; /* Ensure the image adapts to the container size */
+        height: auto; /* Maintain aspect ratio */
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    h3 {
+      font-size: 1rem; /* Adjust this value as needed */
+      margin: 0; /* Optional: Remove default margin */
+      color: #333; /* Optional: Set a color for better visibility */
+    }
+    
+}
+
+h1 {
+  font-size: 4rem; /* Adjust this value as needed */
+  margin: 0; /* Optional: Remove default margin */
+  color: #333; /* Optional: Set a color for better visibility */
+}
+h2 {
+  font-size: 2rem; /* Adjust this value as needed */
+  margin: 0; /* Optional: Remove default margin */
+  color: #333; /* Optional: Set a color for better visibility */
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Red Hat Display', sans-serif; /* Change font to Red Hat Display */
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #cf2727;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+/* Shadow container for the entire content */
+
+/* General layout styling */
+.content-wrapper {
+  display: flex;
+  margin: 0; /* No margin inside the content wrapper */
+  padding: 0; /* No padding inside the content wrapper */
+}
+
+.animated-collage-container {
+  flex: 4; /* 4:1 ratio for flex layout */
+  padding: 0; /* Remove padding inside the animated collage container */
+}
+
+.sidebar-content {
+  flex: 1; /* 4:1 ratio for flex layout */
+  padding: 0; /* Remove padding inside the sidebar content container */
+}
+
+.animated-collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center images horizontally */
+  width: 100%; /* Use full width of the container */
+  box-sizing: border-box;
+}
+
+.animated-collage img {
+  width: 40%; /* Image width */
+  height: auto;
+  object-fit: cover;
+  margin: 5px; /* Margin around each image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-collage img:hover {
+  transform: scale(1.1); /* Scale factor on hover */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+.view-student-container {
+  max-width: 1000px;
+  padding: 10px;
+  margin: 10px auto;  
+  background: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+
+.login-register-container {
+  max-width: 500px; /* Medium width for the form */
+  margin: 50px auto; /* Center align on the page */
+  padding: 20px; /* Padding inside the container */
+  background: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.invalid_feedback {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 0.5rem;
+}
+/* Main container for centering content */
+.assign-subject-container {
+  max-width: 900px; /* Adjust width as needed */
+  margin: 20px auto; /* Center align the container horizontally */
+  padding: 20px; /* Padding inside the container */
+  background: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Styling for the subject container */
+.subject-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Styling for each subject item */
+.assign-subject-item {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for subject items */
+.assign-subject-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Label styling within each subject item */
+.assign-subject-item label {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Checkbox styling */
+.assign-subject-item input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.profile-page-container {
+  max-width: 900px; /* Adjust width as needed */
+  margin: 20px auto; /* Center align the container horizontally */
+  padding: 20px; /* Padding inside the container */
+  background: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.profile-page-container .image-wrapper {
+  width: 150px; /* Fixed width for the circular frame */
+  height: 150px; /* Fixed height for the circular frame */
+  border-radius: 50%; /* Makes the frame circular */
+  overflow: hidden; /* Hides the parts of the image outside the frame */
+  margin: 0 auto; /* Center align the frame */
+  display: flex; /* Flex container to center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.profile-page-container img {
+  width: 100%; /* Fill the width of the circular frame */
+  height: 100%; /* Fill the height of the circular frame */
+  object-fit: cover; /* Ensures the image covers the circle without stretching */
+}
+
+.account-heading {
+  font-weight: bold; /* Make username bold */
+}
+
+.text-secondary {
+  font-weight: bold; /* Make email bold */
+}
+.alert-container {
+  max-width: 600px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the alert container */
+}
+
+.alert {
+  margin-bottom: 1rem; /* Space below each alert */
+}
+
+.dashboard-item h4 {
+  margin: 0;
+  font-size: 1.25rem; /* Default font size for larger screens */
+  color: #333; /* Darker text color for better readability */
+  font-weight: 600; /* Slightly bold text */
+}
+
+/* Main container for centering content */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Styling for each dashboard item */
+.dashboard-item {
+  width: 200px; /* Default width for larger screens */
+  height: 250px; /* Default height for larger screens */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  border: 1px solid #ddd; /* Light border for better visual separation */
+  border-radius: 15px; /* Rounded corners for the container */
+  padding: 10px; /* Adjust padding for better spacing */
+  margin: 10px; /* Adjust margin for better spacing */
+  background-color: #fff; /* White background for each item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect for dashboard items */
+.dashboard-item:hover {
+  transform: scale(1.08); /* Slightly enlarge the item */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance the shadow on hover */
+}
+
+/* Styling for images inside dashboard items */
+.dashboard-item img {
+  width: 120px; /* Default width for larger screens */
+  height: 120px; /* Default height for larger screens */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 10px; /* Space between image and text */
+  border: 3px solid #545454; /* Border around the image */
+}
+
+/* Styling for the text under each image */
+.dashboard-item h4 {
+  margin: 0;
+  font-size: 1.25rem; /* Default font size for larger screens */
+  color: #333; /* Darker text color for better readability */
+  font-weight: 600; /* Slightly bold text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-item {
+    width: 150px; /* Reduced width for tablets and mobile devices */
+    height: 200px; /* Reduced height for tablets and mobile devices */
+    padding: 8px; /* Adjust padding */
+    margin: 8px; /* Adjust margin */
+  }
+
+  .dashboard-item img {
+    width: 100px; /* Reduced width for images */
+    height: 100px; /* Reduced height for images */
+  }
+
+  .dashboard-item h4 {
+    font-size: 1rem; /* Adjust font size for better readability on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-item {
+    width: 120px; /* Further reduced width for very small screens */
+    height: 160px; /* Further reduced height for very small screens */
+    padding: 6px; /* Adjust padding */
+    margin: 6px; /* Adjust margin */
+  }
+
+  .dashboard-item img {
+    width: 80px; /* Further reduced width for images */
+    height: 80px; /* Further reduced height for images */
+  }
+
+  .dashboard-item h4 {
+    font-size: 0.875rem; /* Further reduced font size for very small screens */
+  }
+}
+
+  @media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+  
+    .animated-collage {
+        width: 95%; /* Full width on small screens */
+    }
+  
+    .animated-collage img {
+        width: 100%; /* Full width on small screens */
+        margin: 2px; /* Adjusted margin for small screens */
+    }
+  
+    .login-register-container {
+       margin-right: 15px;
+       margin-left: 15px;
+    }
+  }
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px; /* Adjust width as needed */
+    background-color: #f8f9fa; /* Light background for sidebar */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #333; /* Text color */
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li img {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar li.active a {
+    font-weight: bold; /* Highlight active link */
+    color: #007bff; /* Change color for active link */
+}
+
+.content {
+    flex-grow: 1; /* Take remaining space */
+    padding: 20px;
+}

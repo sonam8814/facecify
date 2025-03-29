@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="login-register-container">
+            <h2>View Attendance</h2>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.date.label(class="form-control-label") }}
+                    {{ form.date(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.class_.label(class="form-control-label") }}
+                    {{ form.class_(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.subject.label(class="form-control-label") }}
+                    {{ form.subject(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">View Attendance</button>
+                </div>
+            </form>
+
+            {% if selected_class and selected_date %}
+            <h3>Attendance for {{ selected_class.course }} Section {{ selected_class.section }} Semester {{ selected_class.semester }} on {{ selected_date }}</h3>
+            {% endif %}
+</div>
+{% if attendance_data %}
+            <div class="shadow-container3">
+                <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Enrollment Number</th>
+                            <th scope="col">Presence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for record in attendance_data %}
+                        <tr>
+                            <th scope="row">{{ loop.index }}</th>
+                            <td>{{ record.student_name }}</td>
+                            <td>{{ record.enrollment_number }}</td>
+                            <td>{{ record.attendance_status }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            </div>
+
+            {% endif %}
+{% endblock %}
